@@ -10,11 +10,7 @@ const Form = () => {
       </div>         
       <div>
         <h1>Qual periodo quer treinar</h1>
-        <select>
-          <option value="A">Apple</option>
-          <option value="B">Banana</option>
-          <option value="C">Cranberry</option>
-        </select>
+        
       </div>
     </div>
   );
