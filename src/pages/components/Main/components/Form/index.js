@@ -25,7 +25,7 @@ const Form = () => {
   ]
   const [op, setOp] = useState()
   console.log(op)
-  const [counter, setCounter] = useState(0);
+  // const [counter, setCounter] = useState(0);
   const [closeUnits, setCloseUnits] = useState(false)
 
   return (
@@ -64,7 +64,7 @@ const Form = () => {
           </FormGroup>
         </div>
         <div className="foundResults">
-          <p> Resultados encontrados: <span>{counter}</span></p>
+          <p> Resultados encontrados: <span>0</span></p>
         </div>
       </div>
       <div className="btnSection">
