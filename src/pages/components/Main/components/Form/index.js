@@ -23,11 +23,21 @@ const Form = () => {
       'gap': '18:01 às 23:00'
     }
   ]
-  const [op, setOp] = useState()
-  console.log(op)
+  const [op, setOp] = useState() 
   // const [counter, setCounter] = useState(0);
   const [closeUnits, setCloseUnits] = useState(false)
 
+  const showMessage = (val) => {
+    setOp(val)
+    console.log(op)
+    let _shift = data[val].shift
+    let _gap = data[val].gap
+    alert('Selecionou: \n'+_shift+'\n'+_gap)
+  }
+  const showClick = (val) => {
+    alert(val)
+    showMessage(op)
+  }
   return (
     <div className="Form" >
       <div className="horario">
@@ -44,7 +54,7 @@ const Form = () => {
               <FormGroup check className="selectBox">
                 <div className="values">
                   <div>
-                    <Input type="radio" name="radio" value={item.id} onChange={(val) => { setOp(val.target.value) }} />
+                    <Input type="radio" name="radio" value={item.id} onChange={(val) => { setOp(val.target.value)}} />
                     <p> {item.shift} </p>
                   </div>
                   <p>{item.gap}</p>
@@ -68,10 +78,10 @@ const Form = () => {
         </div>
       </div>
       <div className="btnSection">
-        <button className="search">
+        <button className="search" onClick={()=>{ showClick('Clicou em Search')}}>
           ENCONTRAR UNIDADE
         </button>
-        <button className="clean">
+        <button className="clean" onClick={()=>{ showClick('Clicou em Limpar')}}>
           LIMPAR
         </button>
       </div>      
