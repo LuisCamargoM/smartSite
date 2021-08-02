@@ -25,8 +25,8 @@ const Form = () => {
   ]
   const [op, setOp] = useState()
   console.log(op)
-  // const [counter,setCounter] = useState(0);
-  // const [closeUnits,setCloseUnits] = useState(false)
+  const [counter,setCounter] = useState(0);
+  const [closeUnits,setCloseUnits] = useState(false)
   
   return (
     <div className="Form" >
@@ -56,7 +56,7 @@ const Form = () => {
         })
         }
       </div>
-      {/* <div>
+      <div>
         <FormGroup check>
           <div className="">
             <div className="values">
@@ -69,7 +69,7 @@ const Form = () => {
           </div>          
           Check me out
         </FormGroup>
-      </div> */}
+      </div>
       <h1 style={{ backgroundColor: 'red' }}>hello</h1>
     </div>
   );
