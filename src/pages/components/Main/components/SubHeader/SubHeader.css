@@ -1,0 +1,24 @@
+
+.SubHeader{
+    padding: 0 ; 
+    text-align: left;
+}
+.SubHeader h2{    
+    margin-top:100px;
+    /* padding: 0 20px; */
+    font-size: 2.5rem;
+    color: #333333;
+    font-family: 'Gotham-Black'
+}
+.SubHeader p{
+    color: #333333 !important;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: 'Gotham-Book'
+}
+.block{
+    background-color: #333333;
+    height: 10px;
+    margin: 40px 0 ;
+    width: 110px;
+}
