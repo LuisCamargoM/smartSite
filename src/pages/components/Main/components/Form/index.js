@@ -69,7 +69,8 @@ const Form = () => {
       <div className="filter">
         <div className="closeUnits">
           <FormGroup check className="filterItems">            
-            <p> <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!val.target.value) }} />
+            <p> 
+              <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!val.target.value) }} />
             Exibir unidades fechadas</p>
           </FormGroup>
         </div>
