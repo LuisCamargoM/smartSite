@@ -25,9 +25,9 @@ const Form = () => {
   ]
   const [op, setOp] = useState()
   console.log(op)
-  const [counter,setCounter] = useState(0);
+  // const [counter,setCounter] = useState(0);
   const [closeUnits,setCloseUnits] = useState(false)
-  setCounter(1)
+  
   return (
     <div className="Form" >
       <div className="horario">
@@ -64,7 +64,7 @@ const Form = () => {
               <p> Exibir unidades fechadas</p>
             </div>
             <div className="values">              
-              <p> Resultados encontrados: <span>{counter}</span></p>
+              {/* <p> Resultados encontrados: <span>{counter}</span></p> */}
             </div>
           </div>          
           Check me out
