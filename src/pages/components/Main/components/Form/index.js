@@ -27,7 +27,7 @@ const Form = () => {
   console.log(op)
   const [counter,setCounter] = useState(0);
   const [closeUnits,setCloseUnits] = useState(false)
-  
+  setCounter(1)
   return (
     <div className="Form" >
       <div className="horario">
