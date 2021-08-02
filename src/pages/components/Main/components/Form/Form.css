@@ -13,7 +13,7 @@
     display: flex;
     padding: 10px;
     flex-direction: row; 
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 .Form p{
@@ -49,22 +49,115 @@
 .selectBox{
     display: flex;
     flex-direction: column;
+    /* background-color: green;     */
+    justify-content: center;
     
 }
 .selectBox .values {
-    padding: 20px 20px 20px 0px;        
+    padding: 20px 0px 20px 0px;        
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* background-color: green;     */
 }
 .values p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Gotham-Book';
     color: #808080;
 }
-.form-check-input{
-    /* background-color: indigo !important; */
-    display: block;
-    padding: 0!important;
+
+.filter{
+    margin: 20px 10px;
+    padding: 0;
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;
+}
+.filterItems.form-check{
+    margin: 0 !important; 
+    padding: 0 !important; 
+    margin-left: 20px !important;
+}
+
+.closeUnits{
+    margin: auto 0 !important;
+}
+.closeUnits p{    
+    font-size: 0.95rem;
+    color: #333333; 
+}
+.foundResults p{   
+    /* margin-top:10px;
+    margin-bottom:10px; */
+    font-size: 0.95rem;
+    color: #333333; 
+    /* font-family: 'Gotham-Black'; */
+    /* padding-top: 7px; */
+    /* font-weight: bold; */
+}
+.foundResults p span{   
+    font-size: 1.2rem; 
+    font-family: 'Gotham-Black';    
+}
+
+
+.btnSection {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 80px !important;
+    /* background-color: green; */
+}
+.btnSection button{
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Gotham-Bold';
+    width: 100%;    
+    margin:20px  40px ;
+}
+.search{
+    background-color: #FFB612;
+    border-radius: 2px;    
+    border-color: transparent;
+}
+.clean{
+    background-color: transparent;      
+    border-color: rgba(0,0,0,.1);
+}
+@media only screen and (max-width: 600px) {         
+    .filterItems.form-check{
+        /* margin: 0 !important; 
+        padding: 0 !important;  */
+        margin-left: 30px !important;
+    }
+    .btnSection button{
+        /* width: 100%;     */
+        margin-left:0 !important ;
+        margin-right: 0 !important;
+    }
+    .btnSection{     
+        margin: 0 20px !important;
+        padding: 5px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+    }
+    
+    .closeUnits p{    
+        margin: 0;
+        margin-top:10px;
+        padding: 0;
+        font-size: 1.15rem;
+    }
+    .foundResults p{ 
+        margin: 0;
+        margin-top:10px;
+        padding: 0;
+        font-size: 1.15rem;
+    }
+    .filter{
+        display: flex;    
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

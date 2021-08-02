@@ -25,9 +25,9 @@ const Form = () => {
   ]
   const [op, setOp] = useState()
   console.log(op)
-  // const [counter,setCounter] = useState(0);
-  const [closeUnits,setCloseUnits] = useState(false)
-  
+  const [counter, setCounter] = useState(0);
+  const [closeUnits, setCloseUnits] = useState(false)
+
   return (
     <div className="Form" >
       <div className="horario">
@@ -56,21 +56,25 @@ const Form = () => {
         })
         }
       </div>
-      <div>
-        <FormGroup check>
-          <div className="">
-            <div className="values">
-              <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!val.target.value) }}/>
-              <p> Exibir unidades fechadas</p>
-            </div>
-            <div className="values">              
-              {/* <p> Resultados encontrados: <span>{counter}</span></p> */}
-            </div>
-          </div>          
-          Check me out
-        </FormGroup>
+      <div className="filter">
+        <div className="closeUnits">
+          <FormGroup check className="filterItems">            
+            <p> <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!val.target.value) }} />
+            Exibir unidades fechadas</p>
+          </FormGroup>
+        </div>
+        <div className="foundResults">
+          <p> Resultados encontrados: <span>{counter}</span></p>
+        </div>
       </div>
-      <h1 style={{ backgroundColor: 'red' }}>hello</h1>
+      <div className="btnSection">
+        <button className="search">
+          ENCONTRAR UNIDADE
+        </button>
+        <button className="clean">
+          LIMPAR
+        </button>
+      </div>      
     </div>
   );
 }
