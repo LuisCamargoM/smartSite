@@ -7,7 +7,7 @@ const CardUnit = () => {
     <div className="CardUnit" >
       <div className="CardUnit-header">
          <p style={{color:statusColor}}>Aberto</p>
-         <h2>Vicente Linhares</h2>
+         <h2 className="title-h2">Vicente Linhares</h2>
          <p>Rua Tibúrcio Cavalcante, 1885 &#8211; Meireles<br/>Fortaleza, CE</p>
       </div>
       <div className="Cardunit-block"></div>
