@@ -1,0 +1,36 @@
+.Legend{   
+    margin: 20px 0 !important;
+    justify-content: center;
+    text-align: center;    
+}
+.Legend-Row{
+    margin: 0 auto !important;
+}
+.row-title p {
+    font-family: 'Gotham-Black';
+    color:#333333
+}
+.Legend-Col{
+    padding: 0 !important;
+}
+.Legend-Col .content{
+    text-align: center !important;    
+    /* margin-left: 20px; */
+}
+.row{
+    margin:0 !important; 
+}
+.Legend-Col .content p{
+    font-size: calc(12px);    
+    font-family: 'Gotham-Book';
+    font-weight: bold;
+    color: #333333;
+    margin: 0;
+}
+.Label-image{
+    width: 100%;
+    padding: 2px !important;
+    margin: auto;    
+    width: 50px !important;
+    height: 50px!important;
+}
