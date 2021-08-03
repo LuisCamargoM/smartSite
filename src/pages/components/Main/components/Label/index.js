@@ -1,5 +1,5 @@
 import './Label.css';
-import Legend from './components/Legend';
+import Legend from './Legend';
 import { Row } from 'react-bootstrap';
 import { Col } from 'reactstrap';
 
@@ -71,7 +71,7 @@ const Label = () => {
             const label = item.label;
             return (
               <Col lg={3} sm={6} xs={12}>
-                <Legend className=""name={item.name} data={label} />
+                <Legend key={item.name} name={item.name} data={label} />
               </Col>
             )
           }

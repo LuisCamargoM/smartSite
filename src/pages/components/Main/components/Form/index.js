@@ -10,23 +10,22 @@ const Form = () => {
     {
       'id': 0,
       'shift': 'Manhã',
-      'gap': '06:00 às 12:00'
+      'gap': '06:00 às 12:00',
     },
     {
       'id': 1,
       'shift': 'Tarde',
-      'gap': '12:01 às 18:00'
+      'gap': '12:01 às 18:00',
     },
     {
       'id': 2,
       'shift': 'Noite',
-      'gap': '18:01 às 23:00'
+      'gap': '18:01 às 23:00',
     }
-  ]
+  ];
   const [op, setOp] = useState() 
-  // const [counter, setCounter] = useState(0);
   const [closeUnits, setCloseUnits] = useState(false)
-
+  
   const showMessage = (val) => {
     setOp(val)
     console.log(op)
@@ -38,6 +37,7 @@ const Form = () => {
     alert(val)
     showMessage(op)
   }
+
   return (
     <div className="Form" >
       <div className="horario">
@@ -70,7 +70,7 @@ const Form = () => {
         <div className="closeUnits">
           <FormGroup check className="filterItems">            
             <p> 
-              <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!val.target.value) }} />
+              <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!closeUnits) }} />
             Exibir unidades fechadas</p>
           </FormGroup>
         </div>

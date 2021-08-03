@@ -14,7 +14,7 @@ const Legend = ({ name, data }) => {
                 {
                     data.map((item) => {
                         return (
-                            <Col className="Legend-Col" key={cont} lg={cont} sm={cont} xs={cont}>
+                            <Col className="Legend-Col" key={item.path} lg={cont} sm={cont} xs={cont}>
                                 <div className="content">
                                     <Row lg={12} md={12} sm={12} xs={12}>
                                         <Image src={item.path} className="Label-image"/>
