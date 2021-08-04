@@ -1,9 +1,9 @@
 import './CardUnit.css';
 import { Row, Col } from 'react-bootstrap';
 import { Image } from 'react-bootstrap';
+import { Markup } from 'interweave';
 
-const CardUnit = ({ data }) => {
-  console.log(data)
+const CardUnit = ({ data }) => {  
   function getColor(val) {
     if (val === true) { return '#2FC022' }
     else { return '#dc0a17' }
@@ -22,7 +22,7 @@ const CardUnit = ({ data }) => {
       <div className="CardUnit-header">
         <p className="status" style={{ color: statusColor }}>{openTxt}</p>
         <h2 className="title-h2">{title}</h2>
-        <p>{content}</p>        
+        <Markup content={content}/>
       </div>
       <div className="Cardunit-block"></div>
       {open?

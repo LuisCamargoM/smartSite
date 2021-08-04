@@ -35,7 +35,6 @@ const Form = () => {
   const dispatch = useDispatch();  
 
   const updateOp = (val) => {
-    console.log('updateop',val)
     setOp(val)
     setShift(data[op].gap)
   }
@@ -43,6 +42,7 @@ const Form = () => {
   const clean = () => {
     dispatch({ type:'CLEAN'})    
     setCloseUnits(false)
+    setQtd(0)
     setShift('')
   }
 
@@ -73,7 +73,7 @@ const Form = () => {
               <FormGroup check className="selectBox">
                 <div className="values">
                   <div>
-                    <Input type="radio" name="radio" onChange={(val) => { updateOp(val.target.value) }} />
+                    <Input type="radio" name="radio" onChange={(val,i) => { updateOp(item.id) }} />
                     <p> {item.shift} </p>
                   </div>
                   <p>{item.gap}</p>

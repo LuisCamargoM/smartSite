@@ -109,16 +109,12 @@ const API = async function (type, { shift, closeUnits }) {
                     return undefined
                 }
 
-            }
-            function normalize(value,regx){                                
-                return value.split(regx)
-            }
+            }            
             const resultado = data.filter(filterLocation)
 
             for (let i = 0; i < resultado.length; i++) {
-                const element = resultado[i];
-                let splitAddress = normalize(normalize(normalize(element.content,'<p>')[1],'</p>')[0],'&#8211')
-                resultado[i].content = splitAddress[0] + normalize(splitAddress[1],'<br>')
+                const element = resultado[i]
+                resultado[i].content = element.content; 
                 resultado[i].mask = getPath('mask', element.mask)
                 resultado[i].towel = getPath('towel', element.towel)
                 resultado[i].fountain = getPath('fountain', element.fountain)
