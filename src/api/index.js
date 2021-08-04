@@ -124,5 +124,4 @@ const API = async function (type, { shift, closeUnits }) {
         }
     }
 }
-
 export default API;
