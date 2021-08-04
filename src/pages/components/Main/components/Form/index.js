@@ -1,11 +1,15 @@
 import './Form.css';
 
-import { Image } from 'react-bootstrap';
+import { Image, Spinner } from 'react-bootstrap';
 import { FormGroup, Input } from 'reactstrap';
 import { useState } from 'react';
 
-const Form = () => {
+import API from '../../../../../api';
+import { useDispatch } from 'react-redux';
 
+
+
+const Form = () => {
   const data = [
     {
       'id': 0,
@@ -23,21 +27,36 @@ const Form = () => {
       'gap': '18:01 às 23:00',
     }
   ];
-  const [op, setOp] = useState() 
+  const [qtd, setQtd] = useState(0)
+  const [op, setOp] = useState(0)
   const [closeUnits, setCloseUnits] = useState(false)
-  
-  const showMessage = (val) => {
+  const [shift, setShift] = useState('')
+  const [loading, setLoading] = useState(false)
+  const dispatch = useDispatch();  
+
+  const updateOp = (val) => {
+    console.log('updateop',val)
     setOp(val)
-    console.log(op)
-    let _shift = data[val].shift
-    let _gap = data[val].gap
-    alert('Selecionou: \n'+_shift+'\n'+_gap)
-  }
-  const showClick = (val) => {
-    alert(val)
-    showMessage(op)
+    setShift(data[op].gap)
   }
 
+  const clean = () => {
+    dispatch({ type:'CLEAN'})    
+    setCloseUnits(false)
+    setShift('')
+  }
+
+  async function search() {
+    setLoading(true)
+    const resp = await API('SEARCH', { shift, closeUnits })
+    const resultado = resp.resultado
+    
+    
+    const quantity = resp.qtd
+    setQtd(quantity)
+    dispatch({ type:'SEARCH', 'resultado':resultado, 'qtd':quantity})
+    setLoading(false);
+  }
   return (
     <div className="Form" >
       <div className="horario">
@@ -54,7 +73,7 @@ const Form = () => {
               <FormGroup check className="selectBox">
                 <div className="values">
                   <div>
-                    <Input type="radio" name="radio" value={item.id} onChange={(val) => { setOp(val.target.value)}} />
+                    <Input type="radio" name="radio" onChange={(val) => { updateOp(val.target.value) }} />
                     <p> {item.shift} </p>
                   </div>
                   <p>{item.gap}</p>
@@ -68,24 +87,36 @@ const Form = () => {
       </div>
       <div className="filter">
         <div className="closeUnits">
-          <FormGroup check className="filterItems">            
-            <p> 
-              <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!closeUnits) }} />
-            Exibir unidades fechadas</p>
+          <FormGroup check className="filterItems">
+            <p>
+              <Input type="checkbox" value={closeUnits} onChange={(val) => { setCloseUnits(!closeUnits); }} />
+              Exibir unidades fechadas</p>
           </FormGroup>
         </div>
         <div className="foundResults">
-          <p> Resultados encontrados: <span>0</span></p>
+          <p> Resultados encontrados: <span>{qtd}</span></p>
         </div>
       </div>
       <div className="btnSection">
-        <button className="search" onClick={()=>{ showClick('Clicou em Search')}}>
-          ENCONTRAR UNIDADE
+        <button className="search" onClick={() => { search() }}>
+          {
+            loading ?
+              <>
+                <Spinner animation="border" style={{ color: 'white' }} size={1} />
+              </>
+              :
+              <>
+                ENCONTRAR UNIDADE
+              </>
+          }
         </button>
-        <button className="clean" onClick={()=>{ showClick('Clicou em Limpar')}}>
+        <button className="clean" onClick={() => { clean() }}>
           LIMPAR
-        </button>
-      </div>      
+        </button>        
+      </div>
+      {/* <div className="notfound">
+        <h2 style={{backgroundColor:{errorColor}}}>{notFound}</h2>
+      </div> */}
     </div>
   );
 }

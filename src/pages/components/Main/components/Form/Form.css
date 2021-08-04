@@ -118,6 +118,14 @@
     background-color: transparent;      
     border-color: rgba(0,0,0,.1);
 }
+.notfound h1{
+    background-color: red;
+    text-align: justify;
+    width: 20%;
+    /* padding: 0 auto; */
+    /* margin: 0 auto; */
+
+}
 @media only screen and (max-width: 600px) {          
     .btnSection button{        
         margin-left:0 !important ;
@@ -149,3 +157,4 @@
         justify-content: space-between;
     }
 }
+

@@ -62,7 +62,6 @@ const Label = () => {
       ]
     }
   ]
-  // console.log(data)
   return (
     <div className="Label" >
       <Row lg={12} sm={12} className="val">
@@ -70,8 +69,8 @@ const Label = () => {
           data.map((item) => {
             const label = item.label;
             return (
-              <Col lg={3} sm={6} xs={12}>
-                <Legend key={item.name} name={item.name} data={label} />
+              <Col key={item.name} lg={3} sm={6} xs={12}>
+                <Legend  name={item.name} data={label} />
               </Col>
             )
           }

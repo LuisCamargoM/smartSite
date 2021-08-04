@@ -1,5 +1,5 @@
 .CardUnit{
-    min-height: 400px;
+    height: 410px;
     margin: 20px 0;
     border-radius: 10px;    
     background-color: #f5f5f5;
@@ -7,6 +7,7 @@
 }
 .CardUnit-header{
     padding-right: 5%;
+    min-height: 20vmin;
 }
 .col-lg-6{
     padding: 0 !important;
@@ -17,9 +18,22 @@
         margin:0 !important;
         font-family: 'Gotham-Black';    
     }
-.CardUnit-title p{
+    
+.CardUnit-header .status{
+    font-size: 0.9rem;    
+    font-family: 'Gotham-Black';    
+}
+.CardUnit-header p{
     font-size: 0.9rem;    
     font-family: 'Gotham-Book';    
+}
+.CardUnit-header h2{
+    font-size: 0.9rem;    
+    font-family: 'Gotham-Black';    
+}
+.CardUnit-title p{
+    font-size: 0.9rem;    
+    font-family: 'Gotham-Black';    
     color: #808080;
 }
 .CardUnit-title h2{

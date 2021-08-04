@@ -6,9 +6,10 @@
 
 .result-row{    
     display: flex;
-    flex-direction: row;
-    justify-self: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .result-col{
     margin-left: 12 !important;
+    background-color: red;
 }
