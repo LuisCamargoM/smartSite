@@ -1,76 +1,32 @@
 # SmartSite - Smart Fit Challenge
-
-    Este é um projeto da Smart Fit de um site inteligente que traz as unidades que estao em funcionamento ou não com suas respectivas informações de horario, localização e prevenções adotadas pelas mesmas.
+Este é um projeto da Smart Fit de um site inteligente que traz as unidades que estao em funcionamento ou não com suas respectivas informações de horario, localização e prevenções adotadas pelas mesmas.
 
 ## Tecnologias
+Este projeto foi desenvolvido em javascript com os frameworks:
+    - React :: para o desenvolvimento,
+    - Reactstrap/Bootstrap :: para trabalhar com o layout e composição dos componentes usados.
 
-    Este projeto foi desenvolvido em javascript com os frameworks:
-        - React :: para o desenvolvimento,
-        - Reactstrap/Bootstrap :: para trabalhar com o layout e composição dos componentes usados.
+## Como acesar/rodar o projeto ?
+Forma 1 - Rodando Localmente
+    Voce pode acessar o seu terminal e ir até a pasta que deseja instalar a aplicação e rodar o seguinte comando:
+```
+    git clone https://github.com/LuisCamargoM/smartSite.git
+```
+    Em seguida, acessar a pasta raiz do repositorio e rodar o seguinte comando:
+```
+    npm install
+``` 
 
-## Como iniciar o projeto ?
+Forma 2 - Rodando Localmente via docker
+    Voce pode acessar o seu terminal e ir até a pasta que deseja instalar a aplicação e rodar o seguinte comando:
+```
+    git clone https://github.com/LuisCamargoM/smartSite.git
+```
+    Em seguida, acessar a pasta raiz do repositorio e rodar os seguintes comandos:
+```
+    docker build . -t smartsite
+    docker run -it -p 3000:3000 smartsite
+``` 
 
-    Forma 1)
-        Voce pode acessar o seu terminal de maior preferencia e realizar o cline dsoo
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acesso em produção
+O smart site esta rodando na plataforma Netlify. Ela esta fazendo a intermediação do código do repositorio para produção 

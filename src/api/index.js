@@ -1,8 +1,8 @@
-const BASE_URL = process.env.REACT_APP_BASE_URL
+const BASE_URL = process.env.REACT_APP_BASE_URL || 'https://test-frontend-developer.s3.amazonaws.com/data/locations.json'
 const TYPE_SEARCH = 'SEARCH'
 
 const API = async function (type, { shift, closeUnits }) {
-    if (type === TYPE_SEARCH) {
+    if (type === TYPE_SEARCH) {        
         let response = await fetch(BASE_URL)
             .then(res => res.json());
         if (response.success) {
