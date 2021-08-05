@@ -1,15 +1,21 @@
 import './Result.css';
 
 import CardUnit from './CardUnit';
+import Message from './Message';
+
 import { Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
 const Result = () => {
-  const data = useSelector(state => state.resultado)
+  const data = useSelector(state => state.resultado);
+  const notFound = (data.length) === 0 ? true : false;
   return (
-    // <Row  lg={12} className="result-row">
+    // <Row  lg={12} className="result-row">    
     <div className="Result">
-      <Row lg={12} sm={12} className="val">
+      {notFound ?
+        <Message message="Nenhuma unidade encontrada"/>
+        :
+        <Row lg={12} sm={12} className="val">
         {
           data.map((item) => {
             return (
@@ -21,6 +27,7 @@ const Result = () => {
           )
         }
       </Row>
+        }
     </div>
 
   );

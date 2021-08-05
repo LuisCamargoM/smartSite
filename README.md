@@ -1,11 +1,17 @@
-# Getting Started with Create React App
+# SmartSite - Smart Fit Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Este é um projeto da Smart Fit de um site inteligente que traz as unidades que estao em funcionamento ou não com suas respectivas informações de horario, localização e prevenções adotadas pelas mesmas.
 
-## Available Scripts
+## Tecnologias
 
-In the project directory, you can run:
+    Este projeto foi desenvolvido em javascript com os frameworks:
+        - React :: para o desenvolvimento,
+        - Reactstrap/Bootstrap :: para trabalhar com o layout e composição dos componentes usados.
 
+## Como iniciar o projeto ?
+
+    Forma 1)
+        Voce pode acessar o seu terminal de maior preferencia e realizar o cline dsoo
 ### `yarn start`
 
 Runs the app in the development mode.\

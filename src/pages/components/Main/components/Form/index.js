@@ -114,9 +114,6 @@ const Form = () => {
           LIMPAR
         </button>        
       </div>
-      {/* <div className="notfound">
-        <h2 style={{backgroundColor:{errorColor}}}>{notFound}</h2>
-      </div> */}
     </div>
   );
 }
