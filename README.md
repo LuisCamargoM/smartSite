@@ -14,7 +14,6 @@ Forma 1 - Rodando Localmente
     git clone https://github.com/LuisCamargoM/smartSite.git
     npm install
 ```
-    Em seguida, acessar a pasta raiz do repositorio e rodar o seguinte comando:
 
 
 Forma 2 - Rodando Localmente via docker
